@@ -1,0 +1,15 @@
+<label for="show-menu" class="show-menu">Show Menu</label>
+<input type="checkbox" id="show-menu" role="button">
+
+<ul id="menu">
+	<li><a (click)="gotoHome()">Inici</a></li>
+
+	<li *ngFor="let level1 of menuItems">		
+		<a>{{ level1.label }} &darr;</a>
+		<ul class="hidden">
+			<li *ngFor="let level2 of level1.items">
+				<a (click)="gotoRouterLink(level2.routerLink)">{{ level2.label }}</a>
+			</li>
+		</ul>		
+	</li>	
+</ul>

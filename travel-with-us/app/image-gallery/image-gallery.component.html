@@ -1,0 +1,35 @@
+<div id="image-gallery" *ngIf="showRepeat"> 
+	<ul id="rig">
+	 	<li *ngFor ="let i of galleryImages; let index = index">
+	      <a class="rig-cell">
+	          <img class="rig-img" src="{{i.thumb}}"  alt="{{i.description}}"/>
+	          <span class="rig-overlay"(click)="openGallery(index)"></span>
+	          <span class="rig-text" (click)="openGallery(index)" *ngIf="i.description">
+	          	{{i.description}}
+	          </span>
+	      </a>
+	  </li>
+	</ul>
+</div>
+
+<div id="image-viewer" class="ng-overlay" *ngIf="opened">
+	<div class="ng-gallery-content" >
+		
+		<div class="uil-ring-css" *ngIf="loading">
+			<div></div>
+		</div>         
+
+		<a class="close-popup" (click)="closeGallery()"><i class="fa fa-close"></i></a>
+		<a class="nav-left" *ngIf="galleryImages.length >1" (click)="prevImage()">
+			<i class="fa fa-angle-left"></i>
+		</a>
+		
+		<img *ngIf="!loading" src="{{currentImage.img}}" (click)="nextImage()" class="effect" />
+		
+		<a class="nav-right" *ngIf="galleryImages.length >1" (click)="nextImage()">
+			<i class="fa fa-angle-right"></i>
+		</a>
+		
+		<span class="info-text">{{ currentImageIndex + 1 }}/{{ galleryImages.length }} -  {{currentImage.description}}</span>
+	</div>
+</div>

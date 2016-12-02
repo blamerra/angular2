@@ -1,0 +1,16 @@
+<div *ngIf="travel">   
+
+	<div > 
+  	<h2> {{travel.name}} ({{travel.dateLabel}})</h2>
+	</div>
+
+	<image-gallery [galleryImages]="travelImages"></image-gallery>
+
+</div>
+
+<div *ngIf!="travel">
+	
+	<img src="./app/assets/img/404.png"/>
+	<h1>Viatge no valid</h1>
+
+</div>

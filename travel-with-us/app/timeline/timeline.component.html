@@ -1,0 +1,27 @@
+<section id="cd-timeline" class="cd-container">
+	<div *ngFor="let t of timeline" class="cd-timeline-block">	
+		
+		<div *ngIf="t.type=='photo'" class="cd-timeline-img cd-picture">
+			<img src="app/assets/img/cd-icon-camera.png" alt="Picture">
+		</div> <!-- cd-timeline-img -->
+
+		<div *ngIf="t.type=='location'" class="cd-timeline-img cd-location">
+			<img src="app/assets/img/cd-icon-location.svg" alt="Location">
+		</div> <!-- cd-timeline-img -->	
+
+		<div *ngIf="t.type=='movie'" class="cd-timeline-img cd-movie">
+			<img src="app/assets/img/cd-icon-movie.svg" alt="Movie">
+		</div> <!-- cd-timeline-img -->
+
+		<div class="cd-timeline-content">
+			<h2>{{t.title}}</h2>
+			<p>{{t.description}}</p>
+			
+			<a *ngIf="t.routerLink" class="cd-read-more" (click)="gotoRouterLink(t.routerLink)">{{t.buttonLabel}}</a>
+			<a *ngIf="t.url" class="cd-read-more" href="{{t.url}}">{{t.buttonLabel}}</a>
+
+			<span *ngIf="t.dateLabel" class="cd-date">{{t.dateLabel}}</span>
+		</div> <!-- cd-timeline-content -->
+	</div> <!-- cd-timeline-block -->
+
+</section> <!-- cd-timeline -->

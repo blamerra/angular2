@@ -3,6 +3,7 @@ import { Routes, RouterModule } from '@angular/router';
 
 import { TravelComponent }      from './travel/travel.component';
 import { TimelineComponent } 	  from './timeline/timeline.component';
+import { HomeComponent }        from './home/home.component';
 
 import { TestComponent }        from './test/test.component';
 
@@ -10,13 +11,17 @@ import { TestComponent }        from './test/test.component';
 const appRoutes: Routes = [
   {
     path: '',
-    redirectTo: 'timeline',
+    redirectTo: 'home',
     pathMatch: 'full'
   },      
   {
     path: 'travel/:id',
     component: TravelComponent
   },   
+  {
+    path: 'home',
+    component: HomeComponent
+  },
   {
     path: 'timeline',
     component: TimelineComponent

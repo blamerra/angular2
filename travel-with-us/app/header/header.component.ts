@@ -2,9 +2,10 @@ import { Component, OnInit } from '@angular/core';
 import { Router }            from '@angular/router';
 import { Constants }         from '../constants';
 
+
 @Component({
   moduleId: module.id,
-  selector: 'header',
+  selector: 'app-header',
   templateUrl: 'header.component.html',
   styleUrls: [ 'header.component.css' ]
 })

@@ -14,6 +14,8 @@ import { Constants }            from './constants';
 import { HeaderComponent }      from './header/header.component';
 import { MenuComponent }        from './header/menu.component';
 
+import { HomeComponent }        from './home/home.component';
+
 import { TravelsService }       from './travel/travels.service';
 import { TravelComponent }      from './travel/travel.component';
 
@@ -22,13 +24,10 @@ import { ImageGalleryComponent } from './image-gallery/image-gallery.component';
 import { TimelineComponent }     from './timeline/timeline.component';
 
 //TO DELETE
-import { TestComponent }                  from './test/test.component';
+import { TestComponent }         from './test/test.component';
 
-//import { CountriesService }     from './country/countries.service';
-//import { CountryComponent }     from './country/country.component';
-
-//import { SearchComponent }      from './header/search.component';
-//import { SearchService}         from './header/search.service';
+//import { SearchComponent }     from './header/search.component';
+//import { SearchService}        from './header/search.service';
 
 
 @NgModule({
@@ -37,20 +36,13 @@ import { TestComponent }                  from './test/test.component';
     FormsModule,
     HttpModule,
     routing,
-
-    //PrimeNG UI components
-    //MegaMenuModule,
-
-    //PrimeNG UI TEST components
-    //PanelMenuModule,
-    //InputTextModule, 
-    //ButtonModule,
-    //ConfirmDialogModule    
   ],
+
   declarations: [
     AppComponent,   
     HeaderComponent,
-    MenuComponent,    
+    MenuComponent,  
+    HomeComponent,  
     TravelComponent,
     ImageGalleryComponent,
     TimelineComponent,

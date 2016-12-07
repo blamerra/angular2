@@ -2,8 +2,9 @@
 <input type="checkbox" id="show-menu" role="button">
 
 <ul id="menu">
+<!--
 	<li><a (click)="gotoHome()">Inici</a></li>
-
+-->
 	<li *ngFor="let level1 of menuItems">		
 		<a>{{ level1.label }} &darr;</a>
 		<ul class="hidden">

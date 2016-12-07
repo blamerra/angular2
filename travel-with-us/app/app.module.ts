@@ -13,6 +13,7 @@ import { Constants }            from './constants';
 
 import { HeaderComponent }      from './header/header.component';
 import { MenuComponent }        from './header/menu.component';
+import { FooterComponent }      from './footer/footer.component';
 
 import { HomeComponent }        from './home/home.component';
 
@@ -42,6 +43,7 @@ import { TestComponent }         from './test/test.component';
     AppComponent,   
     HeaderComponent,
     MenuComponent,  
+    FooterComponent,
     HomeComponent,  
     TravelComponent,
     ImageGalleryComponent,
